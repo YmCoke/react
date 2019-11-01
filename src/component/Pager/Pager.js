@@ -33,7 +33,7 @@ export default class Pager extends React.Component {
 
     pageChange (newPage) {
         if (this.props.current === newPage) return;
-        if (newPage < 0) return;
+        if (newPage < 1) return;
         if (newPage > this.allPage) return;
         this.props.onPageChange && this.props.onPageChange(newPage);
     }
