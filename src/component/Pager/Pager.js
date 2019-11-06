@@ -1,17 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Pager.css';
 
 export default class Pager extends React.Component {
-    constructor (props) {
-        /**
-         * 规定传入:
-         * 1. current: 当前页码
-         * 2. total: 总条数
-         * 3. limit: 每页做多数据条数
-         * 4. panelNumber: 最多多少页码
-         * 5. onPageChange: 触发翻页事件
-         * */
-        super(props);
+    static propTypes = {
+        current: PropTypes.number.isRequired,       // 当前页码
+        total: PropTypes.number.isRequired,         // 总条数
+        limit: PropTypes.number.isRequired,         // 每页做多数据条数
+        panelNumber: PropTypes.number.isRequired,   // 最多多少页码
+        onPageChange: PropTypes.func.isRequired,    // 触发翻页事件
     }
 
     init () {

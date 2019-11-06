@@ -1,6 +1,14 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Student extends Component {
+
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        birth: PropTypes.number.isRequired,
+        sex: PropTypes.oneOf([0, 1, '0', '1'])
+    }
+
     render() {
         return (
             <li>
