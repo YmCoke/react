@@ -5,8 +5,8 @@ export default function useStudentsByPage (page = 1, limit = 10) {
     const [resp, setResp] = useState({});
     useEffect(_ => {
         (async function () {
-            const data = await getStudentsByPage(page, limit);
-            setResp(data);
+            const resp = await getStudentsByPage(page, limit);
+            setResp(resp);
         })()
     }, [page, limit]);
     return resp;

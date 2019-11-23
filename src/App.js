@@ -11,7 +11,8 @@ function Test () {
 
 function ShowStudentInfo (props) {
     const resp = useStudentsByPage(props.page, props.limit);
-    const list = resp.findByPage && resp.findByPage.map(it => <li key={it.id}>{it.name}</li>)
+    const list = resp.findByPage && resp.findByPage.map(it => <li key={it.id}>{it.name}</li>);
+    console.log(list);
     return <ul>
         {list}
     </ul>
