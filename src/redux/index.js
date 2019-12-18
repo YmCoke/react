@@ -30,3 +30,4 @@ const boundActions = bindActionCreators(numberAction, window.store.dispatch);
 boundActions.getSetAction(20);
 
 console.log(window.store.getState());
+
