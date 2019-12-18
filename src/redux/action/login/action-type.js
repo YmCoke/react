@@ -1,0 +1,1 @@
+export const SETLOGIN = Symbol('set-login');
